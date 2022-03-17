@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ProjetLabyrinthe.wav-5a9c1b4af712a041a224f7b883cd7efe.sample"
+
+[deps]
+
+source_file="res://src/Labyrinthe/ProjetLabyrinthe.wav"
+dest_files=[ "res://.import/ProjetLabyrinthe.wav-5a9c1b4af712a041a224f7b883cd7efe.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

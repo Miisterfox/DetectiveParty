@@ -1,0 +1,199 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://src/Labyrinthe/src/Map/Intro.gd" type="Script" id=1]
+[ext_resource path="res://src/Labyrinthe/src/Map/MapL.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Labyrinthe/src/Map/PlayerL.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Labyrinthe/src/Sprite/fond-ecran-noir.jpg" type="Texture" id=4]
+[ext_resource path="res://src/Labyrinthe/src/Sprite/Background.jpg" type="Texture" id=5]
+[ext_resource path="res://src/Sprite/tilesheet.png" type="Texture" id=6]
+[ext_resource path="res://src/Labyrinthe/src/Sprite/START.png" type="Texture" id=7]
+[ext_resource path="res://src/Labyrinthe/src/Sprite/Flower trophee.png" type="Texture" id=8]
+[ext_resource path="res://src/Labyrinthe/src/Sprite/Cadre.png" type="Texture" id=9]
+[ext_resource path="res://src/Labyrinthe/src/Sprite/Grass.png" type="Texture" id=10]
+[ext_resource path="res://src/Labyrinthe/src/Map/Labyrinthe.gd" type="Script" id=11]
+[ext_resource path="res://src/Labyrinthe/src/Map/Start.gd" type="Script" id=12]
+[ext_resource path="res://src/Labyrinthe/src/Map/Trophee.gd" type="Script" id=13]
+[ext_resource path="res://src/Labyrinthe/src/Map/AudioStreamPlayer.gd" type="Script" id=14]
+[ext_resource path="res://src/Labyrinthe/src/Map/ProjetLabyrinthe.wav" type="AudioStream" id=15]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="TileSet" id=3]
+0/name = "tilesheet.png 0"
+0/texture = ExtResource( 6 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "Grass.png 1"
+1/texture = ExtResource( 10 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 64, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 2 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 27.8191, 30.8893 )
+
+[node name="Game" type="Node"]
+script = ExtResource( 11 )
+
+[node name="Background" type="TextureRect" parent="."]
+margin_left = -122.841
+margin_top = -217.108
+margin_right = 1477.16
+margin_bottom = 982.892
+rect_scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Map" parent="." instance=ExtResource( 2 )]
+visible = false
+tile_set = SubResource( 3 )
+collision_layer = 2
+collision_mask = 2
+tile_data = PoolIntArray( 131082, 1, 0, 131083, 1, 0, 131084, 1, 0, 131085, 1, 0, 131086, 1, 0, 131087, 1, 0, 131088, 1, 0, 131089, 1, 0, 131090, 1, 0, 131091, 1, 0, 131092, 1, 0, 131093, 1, 0, 131094, 1, 0, 131095, 1, 0, 131096, 1, 0, 131097, 1, 0, 131098, 1, 0, 131100, 1, 0, 131101, 1, 0, 131102, 1, 0, 131103, 1, 0, 131104, 1, 0, 131105, 1, 0, 131106, 1, 0, 196618, 1, 0, 196621, 1, 0, 196642, 1, 0, 262156, 1, 0, 262157, 1, 0, 262158, 1, 0, 262160, 1, 0, 262161, 1, 0, 262162, 1, 0, 262163, 1, 0, 262164, 1, 0, 262165, 1, 0, 262166, 1, 0, 262167, 1, 0, 262168, 1, 0, 262169, 1, 0, 262170, 1, 0, 262171, 1, 0, 262172, 1, 0, 262173, 1, 0, 262174, 1, 0, 262175, 1, 0, 262176, 1, 0, 262178, 1, 0, 327690, 1, 0, 327692, 1, 0, 327709, 1, 0, 327712, 1, 0, 327714, 1, 0, 393226, 1, 0, 393228, 1, 0, 393230, 1, 0, 393231, 1, 0, 393232, 1, 0, 393233, 1, 0, 393234, 1, 0, 393235, 1, 0, 393236, 1, 0, 393237, 1, 0, 393239, 1, 0, 393240, 1, 0, 393241, 1, 0, 393242, 1, 0, 393243, 1, 0, 393244, 1, 0, 393245, 1, 0, 393246, 1, 0, 393248, 1, 0, 393250, 1, 0, 458762, 1, 0, 458766, 1, 0, 458778, 1, 0, 458782, 1, 0, 458784, 1, 0, 458786, 1, 0, 524298, 1, 0, 524300, 1, 0, 524302, 1, 0, 524304, 1, 0, 524305, 1, 0, 524306, 1, 0, 524308, 1, 0, 524309, 1, 0, 524310, 1, 0, 524311, 1, 0, 524312, 1, 0, 524313, 1, 0, 524314, 1, 0, 524315, 1, 0, 524316, 1, 0, 524318, 1, 0, 524322, 1, 0, 589834, 1, 0, 589836, 1, 0, 589838, 1, 0, 589840, 1, 0, 589852, 1, 0, 589854, 1, 0, 589856, 1, 0, 589858, 1, 0, 655370, 1, 0, 655372, 1, 0, 655374, 1, 0, 655376, 1, 0, 655378, 1, 0, 655379, 1, 0, 655380, 1, 0, 655381, 1, 0, 655383, 1, 0, 655384, 1, 0, 655385, 1, 0, 655386, 1, 0, 655388, 1, 0, 655390, 1, 0, 655392, 1, 0, 655394, 1, 0, 720906, 1, 0, 720908, 1, 0, 720910, 1, 0, 720912, 1, 0, 720914, 1, 0, 720922, 1, 0, 720924, 1, 0, 720926, 1, 0, 720928, 1, 0, 720930, 1, 0, 786442, 1, 0, 786444, 1, 0, 786446, 1, 0, 786447, 1, 0, 786448, 1, 0, 786450, 1, 0, 786452, 1, 0, 786453, 1, 0, 786454, 1, 0, 786455, 1, 0, 786456, 1, 0, 786458, 1, 0, 786460, 1, 0, 786462, 1, 0, 786464, 1, 0, 786466, 1, 0, 851978, 1, 0, 851979, 1, 0, 851980, 1, 0, 851982, 1, 0, 851984, 1, 0, 851986, 1, 0, 851988, 1, 0, 851992, 1, 0, 851994, 1, 0, 851996, 1, 0, 851998, 1, 0, 852000, 1, 0, 852002, 1, 0, 917514, 1, 0, 917516, 1, 0, 917518, 1, 0, 917520, 1, 0, 917522, 1, 0, 917523, 1, 0, 917524, 1, 0, 917528, 1, 0, 917530, 1, 0, 917534, 1, 0, 917536, 1, 0, 917538, 1, 0, 983052, 1, 0, 983054, 1, 0, 983056, 1, 0, 983058, 1, 0, 983060, 1, 0, 983064, 1, 0, 983066, 1, 0, 983067, 1, 0, 983068, 1, 0, 983070, 1, 0, 983072, 1, 0, 983074, 1, 0, 1048586, 1, 0, 1048588, 1, 0, 1048590, 1, 0, 1048594, 1, 0, 1048596, 1, 0, 1048597, 1, 0, 1048599, 1, 0, 1048600, 1, 0, 1048602, 1, 0, 1048604, 1, 0, 1048605, 1, 0, 1048606, 1, 0, 1048608, 1, 0, 1048610, 1, 0, 1114122, 1, 0, 1114124, 1, 0, 1114126, 1, 0, 1114128, 1, 0, 1114130, 1, 0, 1114138, 1, 0, 1114140, 1, 0, 1114142, 1, 0, 1114144, 1, 0, 1114146, 1, 0, 1179658, 1, 0, 1179660, 1, 0, 1179661, 1, 0, 1179662, 1, 0, 1179664, 1, 0, 1179666, 1, 0, 1179667, 1, 0, 1179668, 1, 0, 1179669, 1, 0, 1179670, 1, 0, 1179671, 1, 0, 1179672, 1, 0, 1179673, 1, 0, 1179674, 1, 0, 1179676, 1, 0, 1179678, 1, 0, 1179680, 1, 0, 1179682, 1, 0, 1245194, 1, 0, 1245196, 1, 0, 1245198, 1, 0, 1245200, 1, 0, 1245206, 1, 0, 1245212, 1, 0, 1245216, 1, 0, 1245217, 1, 0, 1245218, 1, 0, 1310730, 1, 0, 1310732, 1, 0, 1310734, 1, 0, 1310736, 1, 0, 1310737, 1, 0, 1310738, 1, 0, 1310739, 1, 0, 1310740, 1, 0, 1310741, 1, 0, 1310742, 1, 0, 1310743, 1, 0, 1310744, 1, 0, 1310745, 1, 0, 1310746, 1, 0, 1310747, 1, 0, 1310748, 1, 0, 1310750, 1, 0, 1310752, 1, 0, 1310754, 1, 0, 1376266, 1, 0, 1376268, 1, 0, 1376270, 1, 0, 1376286, 1, 0, 1376288, 1, 0, 1376290, 1, 0, 1441802, 1, 0, 1441804, 1, 0, 1441806, 1, 0, 1441807, 1, 0, 1441808, 1, 0, 1441810, 1, 0, 1441811, 1, 0, 1441812, 1, 0, 1441813, 1, 0, 1441814, 1, 0, 1441815, 1, 0, 1441816, 1, 0, 1441817, 1, 0, 1441818, 1, 0, 1441819, 1, 0, 1441820, 1, 0, 1441821, 1, 0, 1441822, 1, 0, 1441824, 1, 0, 1441826, 1, 0, 1507338, 1, 0, 1507340, 1, 0, 1507347, 1, 0, 1507362, 1, 0, 1572874, 1, 0, 1572876, 1, 0, 1572877, 1, 0, 1572878, 1, 0, 1572880, 1, 0, 1572881, 1, 0, 1572882, 1, 0, 1572883, 1, 0, 1572884, 1, 0, 1572885, 1, 0, 1572886, 1, 0, 1572887, 1, 0, 1572888, 1, 0, 1572889, 1, 0, 1572890, 1, 0, 1572891, 1, 0, 1572892, 1, 0, 1572893, 1, 0, 1572894, 1, 0, 1572895, 1, 0, 1572896, 1, 0, 1572898, 1, 0, 1638410, 1, 0, 1638434, 1, 0, 1703946, 1, 0, 1703947, 1, 0, 1703948, 1, 0, 1703949, 1, 0, 1703950, 1, 0, 1703951, 1, 0, 1703952, 1, 0, 1703953, 1, 0, 1703954, 1, 0, 1703955, 1, 0, 1703956, 1, 0, 1703957, 1, 0, 1703958, 1, 0, 1703959, 1, 0, 1703960, 1, 0, 1703961, 1, 0, 1703962, 1, 0, 1703963, 1, 0, 1703964, 1, 0, 1703966, 1, 0, 1703967, 1, 0, 1703968, 1, 0, 1703969, 1, 0, 1703970, 1, 0 )
+
+[node name="Player" parent="Map" instance=ExtResource( 3 )]
+position = Vector2( 674.585, 290.047 )
+collision_layer = 2
+collision_mask = 2147483650
+
+[node name="Camera" type="Camera2D" parent="Map/Player"]
+zoom = Vector2( 0.5, 0.5 )
+
+[node name="Trophee" type="Area2D" parent="Map"]
+position = Vector2( 1440, 925 )
+collision_layer = 2
+collision_mask = 2147483650
+script = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Trophee"]
+position = Vector2( 1.45679, 3.04596 )
+shape = SubResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="Map/Trophee"]
+texture = ExtResource( 8 )
+
+[node name="EndGame" type="TextureRect" parent="Map"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2323.0
+margin_top = 302.0
+margin_right = 3351.0
+margin_bottom = 906.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="Map/EndGame"]
+anchor_mode = 0
+
+[node name="Label" type="Label" parent="Map/EndGame"]
+margin_left = 461.3
+margin_top = 292.599
+margin_right = 564.3
+margin_bottom = 306.599
+text = "Fin de la partie !"
+align = 1
+valign = 1
+
+[node name="Intro" type="TextureRect" parent="."]
+margin_left = -2.72717
+margin_top = -0.318237
+margin_right = 1022.27
+margin_bottom = 606.682
+texture = ExtResource( 4 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Cadre" type="TextureRect" parent="Intro"]
+margin_left = 15.0
+margin_top = 395.0
+margin_right = 1014.0
+margin_bottom = 587.0
+texture = ExtResource( 9 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start" type="Button" parent="Intro"]
+margin_left = 866.947
+margin_top = 531.339
+margin_right = 986.947
+margin_bottom = 569.339
+icon = ExtResource( 7 )
+expand_icon = true
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="Intro"]
+position = Vector2( 512.341, 303.221 )
+offset = Vector2( 1, 1 )
+current = true
+
+[node name="Text" type="Label" parent="Intro"]
+margin_left = 43.243
+margin_top = 432.714
+margin_right = 688.243
+margin_bottom = 553.714
+text = "Une plante a été retrouvée coupée parmi celles qui étaient dans le vase apporté au Roi.
+Rendez-vous au centre du Jardin, là où le jardiner les a cueilli pour la retrouver."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+autoplay = true
+script = ExtResource( 14 )
+[connection signal="body_entered" from="Map/Trophee" to="Map/Trophee" method="_on_Trophee_body_entered"]
+[connection signal="visibility_changed" from="Map/EndGame" to="Map/EndGame" method="_on_Background_visibility_changed"]
+[connection signal="pressed" from="Intro/Start" to="Intro/Start" method="_on_Start_pressed"]
+[connection signal="start_game" from="Intro/Start" to="." method="hide_screen"]

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ProjetAmbianceLong.wav-e8d83fea0e74a452c45c4a21ed3a6bab.sample"
+
+[deps]
+
+source_file="res://src/Map/ProjetAmbianceLong.wav"
+dest_files=[ "res://.import/ProjetAmbianceLong.wav-e8d83fea0e74a452c45c4a21ed3a6bab.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

@@ -1,0 +1,250 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Network/Lobby.gd" type="Script" id=1]
+[ext_resource path="res://Network/Host.gd" type="Script" id=2]
+[ext_resource path="res://Network/Join.gd" type="Script" id=3]
+[ext_resource path="res://font/Base_front.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Network/Connecting.gd" type="Script" id=5]
+[ext_resource path="res://Network/Back.gd" type="Script" id=6]
+[ext_resource path="res://Sprites_menu/FrereRoi.png" type="Texture" id=7]
+[ext_resource path="res://Sprites_menu/P1.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/wp7704615.jpg" type="Texture" id=10]
+[ext_resource path="res://Sprites_menu/King.png" type="Texture" id=11]
+[ext_resource path="res://Sprites_menu/P3.png" type="Texture" id=12]
+[ext_resource path="res://Sprites_menu/P2.png" type="Texture" id=13]
+[ext_resource path="res://Sprites_menu/Cloud.png" type="Texture" id=14]
+[ext_resource path="res://Sprites_menu/P4.png" type="Texture" id=15]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Animation_Lobby_Network"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer/King:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 1.2, 1.7, 2.6, 3.3, 3.9, 4.5, 5.5, 5.6, 5.7, 5.8, 5.9, 6, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 7, 7.5, 7.9, 8.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 493.797, 1037.01 ), Vector2( 513.955, 895.901 ), Vector2( 730.662, 1011.81 ), Vector2( 912.09, 1021.89 ), Vector2( 1249.75, 989.135 ), Vector2( 1380.78, 968.976 ), Vector2( 1524.41, 968.976 ), Vector2( 1864.45, 998.465 ), Vector2( 2104.54, 732.696 ), Vector2( 1991.45, 605.627 ), Vector2( 2028.7, 483.552 ), Vector2( 2101.9, 378.259 ), Vector2( 2345.91, 352.375 ), Vector2( 2086.49, 282.542 ), Vector2( 2240.6, 428.464 ), Vector2( 956.342, -72.8822 ), Vector2( 951.347, -30.9296 ), Vector2( 946.353, 11.023 ), Vector2( 941.359, 52.9756 ), Vector2( 938.362, 127.891 ), Vector2( 947.352, 196.813 ), Vector2( 947.352, 286.712 ), Vector2( 950.349, 235.769 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationPlayer/Frere du roi:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1, 0.7, 1.2, 1.7, 2.6, 3.3, 3.9, 5.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 713.545, 1022.29 ), Vector2( 721.104, 896.298 ), Vector2( 731.184, 1014.73 ), Vector2( 1126.8, 1014.73 ), Vector2( 1310.75, 1032.37 ), Vector2( 1406.5, 981.973 ), Vector2( 1557.69, 974.413 ), Vector2( 2046.54, 931.576 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationPlayer/p4:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.1, 1.2, 1.7, 2.6, 3.3, 3.9, 4.5, 5.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 932.921, 1035.83 ), Vector2( 945.52, 907.323 ), Vector2( 1285.7, 1010.64 ), Vector2( 1454.53, 1030.8 ), Vector2( 1572.96, 995.517 ), Vector2( 1719.11, 987.958 ), Vector2( 1850.14, 980.398 ), Vector2( 2081.97, 967.799 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationPlayer/p2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.1, 0.7, 1.2, 1.7, 2.6, 3.3, 3.9, 4.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1153.56, 1034.13 ), Vector2( 1148.52, 908.134 ), Vector2( 1161.12, 1029.09 ), Vector2( 1455.94, 1008.93 ), Vector2( 1597.05, 1021.53 ), Vector2( 1758.32, 996.329 ), Vector2( 1851.56, 983.729 ), Vector2( 2060.7, 950.971 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimationPlayer/p3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.1, 0.7, 1.2, 1.7, 2.6, 3.3, 3.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1389.72, 1028.25 ), Vector2( 1399.8, 1045.89 ), Vector2( 1399.8, 874.541 ), Vector2( 1616.51, 1013.13 ), Vector2( 1757.62, 1020.69 ), Vector2( 1876.05, 1000.53 ), Vector2( 2080.16, 924.938 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("AnimationPlayer/p1:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.1, 0.7, 1.2, 1.7, 2.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1687.21, 1022.28 ), Vector2( 1677.13, 939.128 ), Vector2( 1687.21, 1017.24 ), Vector2( 1830.84, 1017.24 ), Vector2( 2057.62, 1022.28 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("AnimationPlayer/Cloud:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.1, 1.2, 2.1, 3.3, 5.1, 6.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1652.09, 409.891 ), Vector2( 1445.46, 412.411 ), Vector2( 1405.15, 412.411 ), Vector2( 1384.99, 311.617 ), Vector2( 1384.99, 384.693 ), Vector2( 1258.99, 409.891 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("AnimationPlayer/Cloud2:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.1, 1.2, 2.1, 3.3, 5.1, 6.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 214.342, 446.144 ), Vector2( 489.005, 428.505 ), Vector2( 582.239, 425.986 ), Vector2( 589.799, 441.105 ), Vector2( 625.076, 549.458 ), Vector2( 677.993, 567.097 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Host:rect_position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 7.9, 8.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 724.521, 276.726 ), Vector2( 721.525, 237.77 ) ]
+}
+
+[node name="Lobby" type="Node2D"]
+position = Vector2( 76, 48 )
+script = ExtResource( 1 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 878.314, 489.747 )
+scale = Vector2( 0.937095, 0.935732 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Host" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 721.525
+margin_top = 237.77
+margin_right = 1041.52
+margin_bottom = 300.77
+custom_fonts/font = ExtResource( 4 )
+text = "host"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Join" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 721.14
+margin_top = 354.727
+margin_right = 1040.14
+margin_bottom = 412.727
+custom_fonts/font = ExtResource( 4 )
+text = "join"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IP" type="LineEdit" parent="Join"]
+margin_left = -1.2063
+margin_top = 127.0
+margin_right = 320.794
+margin_bottom = 191.0
+custom_fonts/font = ExtResource( 4 )
+text = "enter ip"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Connecting" type="ColorRect" parent="."]
+visible = false
+margin_right = 1909.0
+margin_bottom = 1074.0
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Button" parent="."]
+margin_left = -45.4375
+margin_top = 953.504
+margin_right = 274.562
+margin_bottom = 1016.5
+custom_fonts/font = ExtResource( 4 )
+text = "Back"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+reference_path = "res://src/Menu/MainMenu.tscn"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Animation_Lobby_Network"
+anims/Animation_Lobby_Network = SubResource( 1 )
+
+[node name="King" type="Sprite" parent="AnimationPlayer"]
+position = Vector2( 950.349, 235.769 )
+texture = ExtResource( 11 )
+
+[node name="p1" type="Sprite" parent="AnimationPlayer"]
+position = Vector2( 2057.62, 1022.28 )
+scale = Vector2( 1.38097, 1.46179 )
+texture = ExtResource( 9 )
+
+[node name="p2" type="Sprite" parent="AnimationPlayer"]
+position = Vector2( 2060.7, 950.971 )
+scale = Vector2( 1.33865, 1.46179 )
+texture = ExtResource( 13 )
+
+[node name="p3" type="Sprite" parent="AnimationPlayer"]
+position = Vector2( 2080.16, 924.938 )
+scale = Vector2( 1.29632, 1.51951 )
+texture = ExtResource( 12 )
+
+[node name="p4" type="Sprite" parent="AnimationPlayer"]
+position = Vector2( 2081.97, 967.799 )
+scale = Vector2( 1.29632, 1.46179 )
+texture = ExtResource( 15 )
+
+[node name="Cloud" type="Sprite" parent="AnimationPlayer"]
+position = Vector2( 1258.99, 409.891 )
+texture = ExtResource( 14 )
+
+[node name="Cloud2" type="Sprite" parent="AnimationPlayer"]
+position = Vector2( 677.993, 567.097 )
+texture = ExtResource( 14 )
+
+[node name="Frere du roi" type="Sprite" parent="AnimationPlayer"]
+position = Vector2( 2046.54, 931.576 )
+scale = Vector2( 0.691596, 0.610013 )
+texture = ExtResource( 7 )
+[connection signal="pressed" from="Host" to="Host" method="host"]
+[connection signal="pressed" from="Join" to="Join" method="_pressed"]
+[connection signal="pressed" from="Back" to="Back" method="host"]

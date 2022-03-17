@@ -1,0 +1,184 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Sprites_menu/background.png" type="Texture" id=1]
+[ext_resource path="res://src/Menu/Title.gd" type="Script" id=2]
+[ext_resource path="res://font/Base_front.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Sprites_menu/King.png" type="Texture" id=4]
+[ext_resource path="res://Sprites_menu/P4.png" type="Texture" id=5]
+[ext_resource path="res://Sprites_menu/P1.png" type="Texture" id=6]
+[ext_resource path="res://Sprites_menu/P2.png" type="Texture" id=7]
+[ext_resource path="res://Sprites_menu/P3.png" type="Texture" id=8]
+[ext_resource path="res://Sprites_menu/Cloud.png" type="Texture" id=9]
+[ext_resource path="res://src/Menu/Menu_button.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/Menu/AudioStreamPlayer.gd" type="Script" id=11]
+[ext_resource path="res://src/Menu/Egg.gd" type="Script" id=12]
+[ext_resource path="res://ProjetMenu.wav" type="AudioStream" id=13]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Nouvelle animation"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("P1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4, 3.6, 3.8, 4, 4.2, 4.5, 4.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 93.9149, 34.4804 ), Vector2( 91.6699, 92.8485 ), Vector2( 97.2822, 162.441 ), Vector2( 93.9186, 217.94 ), Vector2( 97.2822, 284.371 ), Vector2( 91.396, 346.597 ), Vector2( 96.4413, 411.346 ), Vector2( 95.6004, 476.095 ), Vector2( 94.7595, 540.004 ), Vector2( 94.7595, 606.674 ), Vector2( 99.5217, 679.695 ), Vector2( 96.3469, 736.841 ), Vector2( 100.122, 808.576 ), Vector2( 94.4592, 865.208 ), Vector2( 98.2347, 921.841 ), Vector2( 183.183, 931.28 ), Vector2( 286.497, 936.319 ), Vector2( 336.894, 931.28 ), Vector2( 412.489, 931.28 ), Vector2( 472.965, 933.799 ), Vector2( 533.441, 923.72 ), Vector2( 538.481, 893.482 ), Vector2( 551.08, 921.2 ), Vector2( 551.08, 912.725 ), Vector2( 559.556, 929.676 ), Vector2( 576.507, 927.557 ), Vector2( 584.983, 904.249 ), Vector2( 582.864, 927.557 ), Vector2( 591.34, 919.082 ), Vector2( 604.053, 902.13 ), Vector2( 661.264, 929.676 ), Vector2( 680.335, 916.962 ), Vector2( 701.524, 931.795 ), Vector2( 716.357, 925.438 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("P2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4, 3.6, 3.8, 4, 4.2, 4.5, 4.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 94.31, 25.3521 ), Vector2( 94.31, 93.6103 ), Vector2( 99.0722, 157.106 ), Vector2( 91.5212, 219.402 ), Vector2( 95.2967, 277.922 ), Vector2( 91.5212, 347.769 ), Vector2( 93.4089, 425.167 ), Vector2( 95.2967, 540.319 ), Vector2( 92.7768, 663.792 ), Vector2( 87.7371, 739.387 ), Vector2( 97.8165, 799.863 ), Vector2( 95.2967, 872.939 ), Vector2( 92.7768, 928.375 ), Vector2( 173.412, 918.296 ), Vector2( 251.527, 923.335 ), Vector2( 317.214, 921.216 ), Vector2( 382.9, 921.216 ), Vector2( 469.776, 927.573 ), Vector2( 478.252, 889.433 ), Vector2( 476.133, 931.811 ), Vector2( 490.965, 914.86 ), Vector2( 499.441, 904.265 ), Vector2( 541.82, 931.811 ), Vector2( 567.247, 914.86 ), Vector2( 594.793, 936.049 ), Vector2( 615.982, 929.692 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("P3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4, 3.6, 3.8, 4, 4.2, 4.5, 4.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 87.9066, 33.9421 ), Vector2( 87.9066, 122.137 ), Vector2( 92.9463, 162.454 ), Vector2( 92.9463, 217.891 ), Vector2( 97.9859, 285.926 ), Vector2( 90.4264, 409.399 ), Vector2( 97.9859, 555.549 ), Vector2( 92.9463, 656.343 ), Vector2( 97.1841, 779.241 ), Vector2( 95.0652, 859.76 ), Vector2( 92.9463, 921.209 ), Vector2( 207.368, 925.447 ), Vector2( 298.482, 925.447 ), Vector2( 368.407, 923.328 ), Vector2( 391.715, 893.663 ), Vector2( 423.499, 921.209 ), Vector2( 455.283, 912.733 ), Vector2( 491.304, 929.684 ), Vector2( 518.85, 927.565 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("P4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2.6, 2.8, 3, 3.2, 3.4, 3.6, 3.8, 4, 4.2, 4.5, 4.8, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 90.9033, 158.592 ), Vector2( 99.379, 279.371 ), Vector2( 95.1411, 406.507 ), Vector2( 99.379, 542.118 ), Vector2( 101.498, 641.708 ), Vector2( 97.2601, 773.081 ), Vector2( 103.617, 870.552 ), Vector2( 99.379, 921.406 ), Vector2( 194.731, 925.644 ), Vector2( 283.726, 925.644 ), Vector2( 383.315, 921.406 ), Vector2( 419.337, 923.525 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Cloud:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 3.8, 4, 4.2, 4.5, 4.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 112.452, 98.6435 ), Vector2( 112.452, 157.973 ), Vector2( 250.182, 160.092 ), Vector2( 404.864, 162.211 ), Vector2( 542.594, 164.33 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("King:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4, 0.6, 0.8, 1.1, 1.2, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.4, 2.7, 2.9, 3.1, 3.3, 3.4, 3.6, 3.8, 3.9, 4, 4.2, 4.6, 4.8, 5.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1417.83, 553.425 ), Vector2( 1420.21, 524.884 ), Vector2( 1420.21, 524.884 ), Vector2( 1429.73, 498.722 ), Vector2( 1429.73, 522.506 ), Vector2( 1429.73, 501.1 ), Vector2( 1417.83, 529.641 ), Vector2( 1420.21, 486.83 ), Vector2( 1413.08, 527.263 ), Vector2( 1417.83, 501.1 ), Vector2( 1422.59, 543.912 ), Vector2( 1422.59, 498.722 ), Vector2( 1422.59, 565.317 ), Vector2( 1420.21, 484.451 ), Vector2( 1427.35, 551.047 ), Vector2( 1410.7, 501.1 ), Vector2( 1422.59, 548.668 ), Vector2( 1422.59, 510.614 ), Vector2( 1422.59, 541.533 ), Vector2( 1436.86, 472.559 ), Vector2( 1429.73, 510.614 ), Vector2( 1422.59, 529.641 ), Vector2( 1417.83, 505.857 ), Vector2( 1432.1, 555.804 ), Vector2( 1432.1, 515.371 ), Vector2( 1429.73, 543.912 ), Vector2( 1422.59, 508.235 ), Vector2( 1429.73, 539.155 ), Vector2( 1415.46, 508.235 ), Vector2( 1420.21, 555.804 ), Vector2( 1420.21, 520.127 ) ]
+}
+
+[node name="MainMenu" type="Node"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 962.58, 534.207 )
+scale = Vector2( 3.17547, 2.36632 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 194.0
+margin_top = 130.0
+margin_right = 1539.0
+margin_bottom = 196.0
+custom_fonts/font = ExtResource( 3 )
+text = "Detective Party"
+align = 1
+valign = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+text_color = Color( 0.984314, 0.0156863, 0.0156863, 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Nouvelle animation"
+"anims/Nouvelle animation" = SubResource( 1 )
+
+[node name="King" type="Sprite" parent="."]
+position = Vector2( 1417.83, 553.425 )
+texture = ExtResource( 4 )
+
+[node name="Cloud" type="Sprite" parent="."]
+position = Vector2( 459.439, -87.6542 )
+texture = ExtResource( 9 )
+
+[node name="P1" type="Sprite" parent="."]
+position = Vector2( 224.263, -106.373 )
+texture = ExtResource( 6 )
+
+[node name="P2" type="Sprite" parent="."]
+position = Vector2( 273.103, -92.5941 )
+texture = ExtResource( 7 )
+
+[node name="P3" type="Sprite" parent="."]
+position = Vector2( 236.293, -101.071 )
+texture = ExtResource( 8 )
+
+[node name="P4" type="Sprite" parent="."]
+position = Vector2( 222.499, -60.6635 )
+texture = ExtResource( 5 )
+
+[node name="Button_Start" parent="." instance=ExtResource( 10 )]
+margin_left = 638.438
+margin_top = 449.876
+margin_right = 1086.44
+margin_bottom = 513.876
+focus_neighbour_top = NodePath("../Button_Exit")
+focus_neighbour_bottom = NodePath("../Button_Options")
+custom_fonts/font = ExtResource( 3 )
+text = "exit"
+start_focused = true
+
+[node name="Button_Exit" parent="." instance=ExtResource( 10 )]
+anchor_top = -0.000873933
+anchor_bottom = -0.000873933
+margin_left = 639.732
+margin_top = 315.932
+margin_right = 1087.73
+margin_bottom = 379.932
+focus_neighbour_top = NodePath("../Button_Options")
+focus_neighbour_bottom = NodePath("../Button_Start")
+custom_fonts/font = ExtResource( 3 )
+text = "Start"
+reference_path = "res://Network/Lobby.tscn"
+
+[node name="\?\?\?" type="Label" parent="."]
+margin_left = 1409.0
+margin_top = 363.0
+margin_right = 1487.0
+margin_bottom = 399.0
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+autoplay = true
+script = ExtResource( 11 )

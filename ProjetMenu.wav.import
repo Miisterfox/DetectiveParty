@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ProjetMenu.wav-5a0ff64a5651bca1d3326028756da003.sample"
+
+[deps]
+
+source_file="res://ProjetMenu.wav"
+dest_files=[ "res://.import/ProjetMenu.wav-5a0ff64a5651bca1d3326028756da003.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0
